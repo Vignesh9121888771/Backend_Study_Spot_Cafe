@@ -1,0 +1,148 @@
+
+### 1. Add Carrel
+POST http://localhost:3000/carrels
+Content-Type: application/json
+
+{
+    "name": "Study Desk 01",
+    "zone": "A"
+}
+
+
+
+### CARREL 2
+POST http://localhost:3000/carrels
+Content-Type: application/json
+
+{
+    "name": "Study Desk 02",
+    "zone": "A"
+}
+
+
+
+### CARREL 3
+POST http://localhost:3000/carrels
+Content-Type: application/json
+
+{
+    "name": "Study Desk 03",
+    "zone": "B"
+}
+
+
+
+### CARREL 4
+POST http://localhost:3000/carrels
+Content-Type: application/json
+
+{
+    "name": "Study Desk 04",
+    "zone": "B"
+}
+
+
+
+### CARREL 5
+POST http://localhost:3000/carrels
+Content-Type: application/json
+
+{
+    "name": "Study Desk 05",
+    "zone": "C"
+}
+
+### 2. Get All Carrels
+GET http://localhost:3000/carrels
+
+
+### 3. Get One Carrel
+GET http://localhost:3000/carrels/1
+
+###
+
+### 4. Update Carrel
+PUT http://localhost:3000/carrels/1
+Content-Type: application/json
+
+{
+    "name": "Study Desk Updated",
+    "zone": "B"
+}
+
+###
+
+### UPDATE CARREL
+PUT http://localhost:3000/carrels/5
+Content-Type: application/json
+
+{
+    "name": "Study Desk 05 Updated",
+    "zone": "C"
+}
+
+
+
+
+### VALIDATION TEST
+POST http://localhost:3000/carrels
+Content-Type: application/json
+
+{
+    "name": "",
+    "zone": "A"
+}
+
+
+### CREATE TEMPORARY CARREL
+POST http://localhost:3000/carrels
+Content-Type: application/json
+
+{
+    "name": "Temporary Desk",
+    "zone": "TEST"
+}
+
+
+### VALIDATION TEST
+POST http://localhost:3000/carrels
+Content-Type: application/json
+
+{
+    "name": "",
+    "zone": "A"
+}
+
+###
+
+### SEARCH BY ZONE
+GET http://localhost:3000/carrels?zone=A
+
+###
+
+### DELETE TEMPORARY CARREL
+DELETE http://localhost:3000/carrels/6
+
+
+### 5. Search by Zone
+GET http://localhost:3000/carrels?zone=A
+
+
+
+### 6. Delete Carrel
+DELETE http://localhost:3000/carrels/1
+
+###
+
+### 7. Pagination - First Page
+GET http://localhost:3000/carrels?page=1&limit=2
+
+###
+
+### 8. Pagination - Second Page
+GET http://localhost:3000/carrels?page=2&limit=2
+
+###
+
+### 9. Invalid Pagination
+GET http://localhost:3000/carrels?page=0

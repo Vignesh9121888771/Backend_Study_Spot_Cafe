@@ -1,0 +1,51 @@
+
+### 1. CREATE BOOKING
+POST http://localhost:3000/bookings
+Content-Type: application/json
+
+{
+    "student_id": 2,
+    "carrel_id": 2,
+    "booking_date": "2026-11-15"
+}
+
+###
+
+### 2. GET ALL BOOKINGS
+GET http://localhost:3000/bookings
+
+###
+
+### 3. GET BOOKING BY ID
+GET http://localhost:3000/bookings/2
+
+###
+
+### 4. UPDATE BOOKING
+PUT http://localhost:3000/bookings/2
+Content-Type: application/json
+
+{
+    "student_id": 1,
+    "carrel_id": 2,
+    "booking_date": "2026-11-16"
+}
+
+###
+
+### 5. TEST INVALID STUDENT ID
+POST http://localhost:3000/bookings
+Content-Type: application/json
+
+{
+    "student_id": 999,
+    "carrel_id": 1,
+    "booking_date": "2026-11-17"
+}
+
+###
+
+### 6. DELETE BOOKING
+DELETE http://localhost:3000/bookings/2
+
+###

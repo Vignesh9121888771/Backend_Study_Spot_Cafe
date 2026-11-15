@@ -1,0 +1,43 @@
+
+### 1. REGISTER STUDENT
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+    "name": "Rahul Kumar",
+    "email": "rahulkumar@example.com"
+}
+
+
+
+### 2. GET ALL STUDENTS
+GET http://localhost:3000/students
+
+
+
+### 3. GET STUDENT BY ID
+GET http://localhost:3000/students/1
+
+
+
+### 4. UPDATE STUDENT
+PUT http://localhost:3000/students/1
+Content-Type: application/json
+
+{
+    "name": "Rahul Kumar Updated",
+    "email": "rahul.modified@example.com"
+}
+
+
+
+### 5. TEST DUPLICATE EMAIL
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+    "name": "Another Student",
+    "email": "rahul.modified@example.com"
+}
+
+
